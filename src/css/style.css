@@ -18,9 +18,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #000000;
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   z-index: var(--z-sticky);
   transition: var(--transition-base);
 }
@@ -46,14 +46,14 @@
 .logo-text {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
+  color: #ffffff;
   letter-spacing: 0.05em;
 }
 
 .logo-subtext {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
+  color: #ffffff;
   letter-spacing: 0.1em;
 }
 
@@ -67,9 +67,10 @@
 .nav-link {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
+  color: #ffffff;
   padding: var(--spacing-sm) 0;
   position: relative;
+  transition: var(--transition-base);
 }
 
 .nav-link:hover {
@@ -101,7 +102,7 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-  background-color: var(--color-bg);
+  background-color: #1a1a1a;
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius-base);
   padding: var(--spacing-sm);
@@ -110,6 +111,7 @@
   visibility: hidden;
   transition: var(--transition-base);
   margin-top: var(--spacing-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-item:hover .submenu {
@@ -124,7 +126,7 @@
 
 .submenu a {
   font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
+  color: #ffffff;
   display: block;
   transition: var(--transition-fast);
 }
@@ -132,22 +134,59 @@
 .submenu a:hover {
   color: var(--color-primary);
   padding-left: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Header Right Icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: var(--transition-base);
+}
+
+.header-icon-youtube {
+  color: #ff0000;
+}
+
+.header-icon-youtube:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.header-icon-chat {
+  color: #00ff00;
+}
+
+.header-icon-chat:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
 }
 
 /* Game Start Button */
 .btn-game-start {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
+  background-color: #ffff00;
+  color: #000000;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-base);
   padding: var(--spacing-sm) var(--spacing-xl);
   border-radius: var(--radius-full);
   transition: var(--transition-base);
   letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-game-start:hover {
-  background-color: var(--color-primary-dark);
+  background-color: #ffff66;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -165,7 +204,7 @@
 .mobile-menu-toggle span {
   width: 100%;
   height: 2px;
-  background-color: var(--color-text-primary);
+  background-color: #ffffff;
   transition: var(--transition-base);
 }
 
@@ -183,7 +222,8 @@
   justify-content: center;
 }
 
-.hero-video {
+/* 페이지 목업 이미지를 배경으로 사용 */
+.hero-background-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -192,81 +232,79 @@
   z-index: 1;
 }
 
-.hero-video video {
+.hero-mockup-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-/* 영상이 없을 경우 배경 색상 */
-.hero-video::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--color-bg-dark) 0%, #2a2a2a 100%);
-  z-index: 1;
-}
-
-.hero-content {
+/* 히어로 오버레이 콘텐츠 */
+.hero-overlay {
   position: relative;
   z-index: 2;
-  text-align: center;
-  color: var(--color-text-white);
-  padding: var(--spacing-4xl) var(--spacing-md);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
+/* 방패 로고 (왼쪽 하단) */
 .hero-shield-logo {
-  margin-bottom: var(--spacing-xl);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 120px;
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: var(--spacing-xl);
+  z-index: 3;
 }
 
 .shield-logo {
   width: 120px;
   height: auto;
-  margin: 0 auto;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
 }
 
-.hero-main-image {
-  margin-bottom: var(--spacing-xl);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-}
-
-.main-hero-image {
-  max-width: 600px;
+/* 메인 오버레이 텍스트 (중앙) */
+.hero-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
   width: 100%;
-  height: auto;
-  margin: 0 auto;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
 }
 
-.hero-copy {
-  margin-top: var(--spacing-xl);
-}
-
-.hero-title {
-  font-size: var(--font-size-5xl);
+.hero-title-main {
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: var(--font-weight-bold);
+  color: #ffffff;
   margin-bottom: var(--spacing-md);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
   letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
-.hero-subtitle {
-  font-size: var(--font-size-xl);
-  opacity: 0.9;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+.hero-subtitle-main {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0.95;
+}
+
+/* 무기 스코프 이미지 (오른쪽 하단) */
+.hero-weapon-scope {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  z-index: 3;
+  width: 200px;
+  height: 200px;
+  /* 필요시 스코프 이미지 추가 */
 }
 
 /* ============================================
@@ -706,11 +744,12 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--color-bg);
+    background-color: #000000;
     flex-direction: column;
     padding: var(--spacing-lg);
     box-shadow: var(--shadow-lg);
     gap: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .nav-menu.active {
@@ -721,9 +760,10 @@
     position: static;
     transform: none;
     box-shadow: none;
-    background-color: var(--color-bg-light);
+    background-color: #1a1a1a;
     margin-top: var(--spacing-sm);
     margin-left: var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .btn-game-start {
@@ -731,12 +771,21 @@
     font-size: var(--font-size-sm);
   }
   
-  .hero-title {
-    font-size: var(--font-size-3xl);
+  .hero-title-main {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   
-  .hero-subtitle {
-    font-size: var(--font-size-lg);
+  .hero-subtitle-main {
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+  }
+  
+  .hero-shield-logo {
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+  }
+  
+  .shield-logo {
+    width: 80px;
   }
   
   .section-title {

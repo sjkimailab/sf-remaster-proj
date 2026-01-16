@@ -75,6 +75,20 @@
                         </ul>
                     </nav>
 
+                    <!-- Header Right Icons -->
+                    <div class="header-icons">
+                        <a href="#" class="header-icon header-icon-youtube" aria-label="공식 유튜브" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="header-icon header-icon-chat" aria-label="공식 카페" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.33 0-2.57-.38-3.62-1.04l-.38-.22L5 19l.26-3.17-.15-.32C4.71 14.69 4 13.45 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+
                     <!-- Game Start Button -->
                     <button class="btn-game-start" id="gameStartBtn" aria-label="게임 시작">
                         <span>GAME START</span>
@@ -94,28 +108,27 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
-            <div class="hero-video">
-                <!-- 배경 영상 (무한 재생) -->
-                <video autoplay muted loop playsinline id="heroVideo">
-                    <source src="/assets/videos/hero-bg.mp4" type="video/mp4">
-                    <!-- 영상 파일이 없을 경우 배경 이미지로 대체 -->
-                </video>
+            <!-- 페이지 목업 이미지를 배경으로 사용 -->
+            <div class="hero-background-image">
+                <img src="/assets/images/features/moving-control.jpeg" alt="스페셜포스 리마스터 페이지 목업" class="hero-mockup-image">
             </div>
             
-            <div class="hero-content">
+            <!-- 히어로 오버레이 콘텐츠 -->
+            <div class="hero-overlay">
                 <div class="hero-shield-logo">
-                    <!-- 방패 로고 이미지 -->
+                    <!-- 방패 로고 이미지 (왼쪽 하단) -->
                     <img src="/assets/images/logo/shield-logo.png" alt="스페셜포스 로고" class="shield-logo">
                 </div>
                 
-                <div class="hero-main-image">
-                    <!-- 대표 이미지 -->
-                    <img src="/assets/images/features/moving-control.jpeg" alt="스페셜포스 리마스터" class="main-hero-image">
+                <!-- 메인 오버레이 텍스트 (중앙) -->
+                <div class="hero-text-overlay">
+                    <h1 class="hero-title-main">다시, 우리는 스페셜포스다!</h1>
+                    <p class="hero-subtitle-main">전설적 국민 FPS의 재탄생</p>
                 </div>
                 
-                <div class="hero-copy">
-                    <h1 class="hero-title">SPECIAL FORCE REMASTERED</h1>
-                    <p class="hero-subtitle">새로운 전설의 시작</p>
+                <!-- 무기 스코프 이미지 (오른쪽 하단) -->
+                <div class="hero-weapon-scope">
+                    <!-- 스코프 이미지는 필요시 추가 -->
                 </div>
             </div>
         </section>
