@@ -9,7 +9,7 @@
       "destination": "/src/html/index.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!src|assets).*)",
       "destination": "/src/html/$1"
     }
   ],
