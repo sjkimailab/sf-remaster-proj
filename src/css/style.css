@@ -220,6 +220,11 @@
 
 .hero-shield-logo {
   margin-bottom: var(--spacing-xl);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
 }
 
 .shield-logo {
@@ -231,6 +236,11 @@
 
 .hero-main-image {
   margin-bottom: var(--spacing-xl);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
 }
 
 .main-hero-image {
@@ -399,6 +409,50 @@
   object-fit: cover;
 }
 
+/* Image Error & Placeholder Styles */
+.img-error {
+  display: none !important;
+}
+
+.img-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-light) 100%);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: var(--spacing-md);
+  box-sizing: border-box;
+}
+
+/* Hero section 이미지 placeholder */
+.hero-shield-logo .img-placeholder,
+.hero-main-image .img-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  min-width: 120px;
+  min-height: 120px;
+  border-radius: var(--radius-md);
+}
+
+/* Footer 로고 placeholder */
+.footer-logo .img-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  min-height: 60px;
+}
+
 .feature-video {
   position: absolute;
   top: 0;
@@ -465,6 +519,13 @@
   align-items: flex-start;
   gap: var(--spacing-2xl);
   flex-wrap: wrap;
+}
+
+.footer-logo {
+  position: relative;
+  display: inline-block;
+  min-width: 120px;
+  min-height: 60px;
 }
 
 .footer-logo img {

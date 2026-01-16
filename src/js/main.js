@@ -174,5 +174,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
+  // ============================================
+  // Image Error Handling (이미지 로드 실패 처리)
+  // ============================================
+  function handleImageError(img) {
+    // 이미지 로드 실패 시 placeholder 처리
+    img.classList.add('img-error');
+    
+    // alt 텍스트를 이용한 placeholder 생성
+    const altText = img.alt || '이미지';
+    const placeholder = document.createElement('div');
+    placeholder.className = 'img-placeholder';
+    placeholder.textContent = altText;
+    
+    // 부모 요소에 placeholder 추가
+    if (img.parentElement) {
+      img.style.display = 'none';
+      img.parentElement.appendChild(placeholder);
+    }
+  }
+  
+  // 모든 이미지에 오류 핸들러 추가
+  document.querySelectorAll('img').forEach(img => {
+    // 이미 로드된 이미지 중 실패한 것 처리
+    if (!img.complete || img.naturalHeight === 0) {
+      handleImageError(img);
+    }
+    
+    // 이미지 로드 실패 이벤트 리스너
+    img.addEventListener('error', function() {
+      handleImageError(this);
+    });
+  });
+  
   console.log('SF 리마스터 웹사이트 로드 완료');
 });
