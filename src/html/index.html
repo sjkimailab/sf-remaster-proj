@@ -6,6 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>스페셜포스 리마스터 - 공식 사이트</title>
     <meta name="description" content="스페셜포스 리마스터 공식 웹사이트. 게임 정보, 새소식, 미디어, 고객센터를 확인하세요.">
+    <meta name="keywords" content="스페셜포스, 리마스터, Special Force, 게임, FPS">
+    <meta name="author" content="DragonFly GF">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="스페셜포스 리마스터 - 공식 사이트">
+    <meta property="og:description" content="스페셜포스 리마스터 공식 웹사이트. 게임 정보, 새소식, 미디어, 고객센터를 확인하세요.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="스페셜포스 리마스터 - 공식 사이트">
+    <meta name="twitter:description" content="스페셜포스 리마스터 공식 웹사이트. 게임 정보, 새소식, 미디어, 고객센터를 확인하세요.">
     
     <!-- Pretendard Font -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -30,38 +43,40 @@
                     </div>
 
                     <!-- Navigation Menu -->
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="/news" class="nav-link">새소식</a>
-                        </li>
-                        <li class="nav-item has-submenu">
-                            <a href="/game-info" class="nav-link">게임정보</a>
-                            <ul class="submenu">
-                                <li><a href="/game-info/ip">스페셜포스 IP</a></li>
-                                <li><a href="/game-info/maps">맵</a></li>
-                                <li><a href="/game-info/weapons">무기</a></li>
-                                <li><a href="/game-info/characters">캐릭터</a></li>
-                                <li><a href="/game-info/guides">기본가이드</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-submenu">
-                            <a href="/media" class="nav-link">미디어</a>
-                            <ul class="submenu">
-                                <li><a href="/media/videos">영상</a></li>
-                                <li><a href="/media/archive">아카이브</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-submenu">
-                            <a href="/support" class="nav-link">고객센터</a>
-                            <ul class="submenu">
-                                <li><a href="/support/faq">FAQ</a></li>
-                                <li><a href="/support/inquiry">1:1 문의</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <nav class="nav-menu" role="navigation" aria-label="주 메뉴">
+                        <ul>
+                            <li class="nav-item">
+                                <a href="/news" class="nav-link">새소식</a>
+                            </li>
+                            <li class="nav-item has-submenu">
+                                <a href="/game-info" class="nav-link" aria-haspopup="true" aria-expanded="false">게임정보</a>
+                                <ul class="submenu" role="menu">
+                                    <li><a href="/game-info/ip" role="menuitem">스페셜포스 IP</a></li>
+                                    <li><a href="/game-info/maps" role="menuitem">맵</a></li>
+                                    <li><a href="/game-info/weapons" role="menuitem">무기</a></li>
+                                    <li><a href="/game-info/characters" role="menuitem">캐릭터</a></li>
+                                    <li><a href="/game-info/guides" role="menuitem">기본가이드</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-submenu">
+                                <a href="/media" class="nav-link" aria-haspopup="true" aria-expanded="false">미디어</a>
+                                <ul class="submenu" role="menu">
+                                    <li><a href="/media/videos" role="menuitem">영상</a></li>
+                                    <li><a href="/media/archive" role="menuitem">아카이브</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-submenu">
+                                <a href="/support" class="nav-link" aria-haspopup="true" aria-expanded="false">고객센터</a>
+                                <ul class="submenu" role="menu">
+                                    <li><a href="/support/faq" role="menuitem">FAQ</a></li>
+                                    <li><a href="/support/inquiry" role="menuitem">1:1 문의</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
 
                     <!-- Game Start Button -->
-                    <button class="btn-game-start" id="gameStartBtn">
+                    <button class="btn-game-start" id="gameStartBtn" aria-label="게임 시작">
                         <span>GAME START</span>
                     </button>
 
