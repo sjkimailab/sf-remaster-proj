@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // 영상 로드 실패 시 배경 이미지로 대체
       const heroSection = document.querySelector('.hero-section');
       if (heroSection) {
-          heroSection.style.backgroundImage = 'url(/assets/images/hero/hero-bg-fallback.jpg)';
+          heroSection.style.backgroundImage = 'url(/assets/images/hero/hero-bg-fallback.png)';
         heroSection.style.backgroundSize = 'cover';
         heroSection.style.backgroundPosition = 'center';
         this.style.display = 'none';
