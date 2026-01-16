@@ -7,10 +7,6 @@
     {
       "source": "/",
       "destination": "/src/html/index.html"
-    },
-    {
-      "source": "/((?!src|assets).*)",
-      "destination": "/src/html/$1"
     }
   ],
   "headers": [
