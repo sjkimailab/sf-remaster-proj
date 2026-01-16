@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>스페셜포스 리마스터 - 공식 사이트</title>
+    <meta name="description" content="스페셜포스 리마스터 공식 웹사이트. 게임 정보, 새소식, 미디어, 고객센터를 확인하세요.">
+    
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="/">
+                            <span class="logo-text">SPECIAL FORCE</span>
+                            <span class="logo-subtext">REMASTERED</span>
+                        </a>
+                    </div>
+
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="/news" class="nav-link">새소식</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="/game-info" class="nav-link">게임정보</a>
+                            <ul class="submenu">
+                                <li><a href="/game-info/ip">스페셜포스 IP</a></li>
+                                <li><a href="/game-info/maps">맵</a></li>
+                                <li><a href="/game-info/weapons">무기</a></li>
+                                <li><a href="/game-info/characters">캐릭터</a></li>
+                                <li><a href="/game-info/guides">기본가이드</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="/media" class="nav-link">미디어</a>
+                            <ul class="submenu">
+                                <li><a href="/media/videos">영상</a></li>
+                                <li><a href="/media/archive">아카이브</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="/support" class="nav-link">고객센터</a>
+                            <ul class="submenu">
+                                <li><a href="/support/faq">FAQ</a></li>
+                                <li><a href="/support/inquiry">1:1 문의</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Game Start Button -->
+                    <button class="btn-game-start" id="gameStartBtn">
+                        <span>GAME START</span>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="메뉴 열기">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-video">
+                <!-- 배경 영상 (무한 재생) -->
+                <video autoplay muted loop playsinline id="heroVideo">
+                    <source src="../../assets/videos/hero-bg.mp4" type="video/mp4">
+                    <!-- 영상 파일이 없을 경우 배경 이미지로 대체 -->
+                </video>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-shield-logo">
+                    <!-- 방패 로고 이미지 -->
+                    <img src="../../assets/images/logo/shield-logo.png" alt="스페셜포스 로고" class="shield-logo">
+                </div>
+                
+                <div class="hero-main-image">
+                    <!-- 대표 이미지 -->
+                    <img src="../../assets/images/hero/main-hero.png" alt="스페셜포스 리마스터" class="main-hero-image">
+                </div>
+                
+                <div class="hero-copy">
+                    <h1 class="hero-title">SPECIAL FORCE REMASTERED</h1>
+                    <p class="hero-subtitle">새로운 전설의 시작</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="news-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">새소식</h2>
+                </div>
+                
+                <div class="news-grid">
+                    <!-- 새소식 카드 4개 -->
+                    <article class="news-card">
+                        <span class="news-badge badge-notice">공지</span>
+                        <div class="news-thumbnail">
+                            <img src="../../assets/images/news/placeholder.jpg" alt="새소식 썸네일">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">신규 콘텐츠 업데이트 안내</h3>
+                            <time class="news-date">2026.03.26</time>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <span class="news-badge badge-event">이벤트</span>
+                        <div class="news-thumbnail">
+                            <img src="../../assets/images/news/placeholder.jpg" alt="새소식 썸네일">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">오픈 기념 이벤트 진행</h3>
+                            <time class="news-date">2026.03.25</time>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <span class="news-badge badge-update">업데이트</span>
+                        <div class="news-thumbnail">
+                            <img src="../../assets/images/news/placeholder.jpg" alt="새소식 썸네일">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">게임 업데이트 내용</h3>
+                            <time class="news-date">2026.03.24</time>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <span class="news-badge badge-notice">공지</span>
+                        <div class="news-thumbnail">
+                            <img src="../../assets/images/news/placeholder.jpg" alt="새소식 썸네일">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">서비스 이용 안내</h3>
+                            <time class="news-date">2026.03.23</time>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Features Section -->
+        <section class="features-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">게임 특징</h2>
+                </div>
+                
+                <div class="features-grid">
+                    <!-- 게임 특징 카드 1: 레벨 디자인 -->
+                    <article class="feature-card">
+                        <div class="feature-image">
+                            <img src="../../assets/images/features/level-design.jpg" alt="레벨 디자인">
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">레벨 디자인</h3>
+                            <p class="feature-description">연리형도 루 다시 구현한 SF 클래식 맵</p>
+                            <div class="feature-detail">
+                                <p>대전트캠프, 위성, 너넌기스 오픈</p>
+                                <p>시즌마다 새로운 맵 추가 예정</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 게임 특징 카드 2: 무빙 컨트롤 -->
+                    <article class="feature-card">
+                        <div class="feature-image">
+                            <img src="../../assets/images/features/moving-control.jpg" alt="무빙 컨트롤">
+                            <div class="feature-video">
+                                <!-- 16:9 비율 영상 -->
+                                <div class="video-placeholder">16:9 영상</div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">무빙 컨트롤</h3>
+                            <p class="feature-description">SF 시그니처, 독보적 무빙 컨트롤 구현</p>
+                            <div class="feature-detail">
+                                <p>대각이동, 유령스텝</p>
+                                <p>고점 & 공중 방화전환</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 게임 특징 카드 3: 사격 시스템 -->
+                    <article class="feature-card">
+                        <div class="feature-image">
+                            <img src="../../assets/images/features/shooting-system.jpg" alt="사격 시스템">
+                            <div class="feature-video">
+                                <!-- 16:9 비율 영상 -->
+                                <div class="video-placeholder">16:9 영상</div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">사격 시스템</h3>
+                            <p class="feature-description">SF 만의 손맛, 그 느낌 그대로</p>
+                            <div class="feature-detail">
+                                <p>각 총기별 개방 연사 패턴 구현 및 스펙 세분화</p>
+                                <p>SF 저격 전술의 핵심 수중, 배포코 다이그믹한 무빙상</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 게임 특징 카드 4: 무기 시스템 -->
+                    <article class="feature-card">
+                        <div class="feature-image">
+                            <img src="../../assets/images/features/weapon-system.jpg" alt="무기 시스템">
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">무기 시스템</h3>
+                            <p class="feature-description">다양한 무기와 전략적 플레이</p>
+                            <div class="feature-detail">
+                                <p>각 무기의 개성 있는 특성</p>
+                                <p>전략적 무기 선택과 활용</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../assets/images/logo/dragonfly-logo.png" alt="DragonFly">
+                    </div>
+                    <p class="footer-copyright">
+                        COPYRIGHT © DRAGONFLY GF CO.,LTD<br>
+                        ALL RIGHT RESERVED
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <ul class="footer-link-list">
+                        <li><a href="/terms/privacy">개인정보 처리방침</a></li>
+                        <li><a href="/terms/service">서비스 이용약관</a></li>
+                        <li><a href="/terms/policy">운영정책</a></li>
+                    </ul>
+                    
+                    <ul class="footer-social">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="공식 유튜브">유튜브</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="공식 카페">카페</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Game Start Popup -->
+    <div class="modal" id="gameStartModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="닫기">&times;</button>
+            <h2 class="modal-title">게임 시작</h2>
+            <div class="platform-links">
+                <a href="#" class="platform-link platform-steam" target="_blank" rel="noopener noreferrer">
+                    <img src="../../assets/images/icons/steam-icon.png" alt="Steam">
+                    <span>Steam</span>
+                </a>
+                <a href="#" class="platform-link platform-epic" target="_blank" rel="noopener noreferrer">
+                    <img src="../../assets/images/icons/epic-icon.png" alt="Epic Games">
+                    <span>Epic Games</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

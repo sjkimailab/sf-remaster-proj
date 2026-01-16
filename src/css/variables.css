@@ -1,0 +1,125 @@
+/* SF 리마스터 디자인 시스템 - CSS Variables */
+
+/* 폰트는 HTML에서 직접 로드합니다 */
+
+:root {
+  /* ============================================
+     컬러 팔레트
+     ============================================ */
+  --color-primary: #46E57E; /* RGB(0.274, 0.899, 0.494) - 게임 특징 컬러 */
+  --color-primary-dark: #2ECC71;
+  --color-primary-light: #6FEC9E;
+  
+  --color-text-primary: #000000;
+  --color-text-secondary: #666666;
+  --color-text-light: #999999;
+  --color-text-white: #FFFFFF;
+  
+  --color-bg: #FFFFFF;
+  --color-bg-dark: #1A1A1A;
+  --color-bg-light: #F5F5F5;
+  --color-bg-overlay: rgba(0, 0, 0, 0.5);
+  
+  --color-border: #E0E0E0;
+  --color-border-dark: #CCCCCC;
+  
+  /* ============================================
+     타이포그래피
+     ============================================ */
+  --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  
+  /* 폰트 크기 */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* 폰트 두께 */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* 행간 */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* ============================================
+     간격 시스템
+     ============================================ */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+  
+  /* ============================================
+     브레이크포인트
+     ============================================ */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1025px;
+  
+  /* ============================================
+     컨테이너 너비
+     ============================================ */
+  --container-max-width: 1200px;
+  --container-padding: 1.25rem; /* 20px */
+  
+  /* ============================================
+     Z-index 레이어
+     ============================================ */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+  
+  /* ============================================
+     트랜지션
+     ============================================ */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* ============================================
+     그림자
+     ============================================ */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* ============================================
+     보더 반경
+     ============================================ */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-base: 0.5rem;  /* 8px */
+  --radius-md: 0.75rem;   /* 12px */
+  --radius-lg: 1rem;      /* 16px */
+  --radius-full: 9999px;
+}
+
+/* 다크 모드 (선택사항) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #CCCCCC;
+    --color-bg: #1A1A1A;
+    --color-bg-light: #2A2A2A;
+    --color-border: #404040;
+  }
+}
