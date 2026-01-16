@@ -8,11 +8,10 @@ import sys
 from pathlib import Path
 
 try:
-    from pdf2image import convert_from_path
     import fitz  # PyMuPDF
 except ImportError:
     print("필요한 라이브러리를 설치해주세요:")
-    print("pip install pdf2image PyMuPDF")
+    print("pip install PyMuPDF")
     print("또는 이미지 추출 도구를 사용하세요.")
     sys.exit(1)
 
