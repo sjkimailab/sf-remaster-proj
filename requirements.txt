@@ -1,0 +1,4 @@
+# Python dependencies for SF Remaster project
+# PDF image extraction and processing
+
+PyMuPDF>=1.23.0
