@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "buildCommand": null,
+  "buildCommand": "",
+  "framework": null,
   "outputDirectory": ".",
   "rewrites": [
     {
